@@ -1,0 +1,387 @@
+/* =========================================================
+   WHOLESALE CONNECT LLC — SHARED STYLESHEET
+   This one file styles all three pages (index, about, contact).
+   Read the comments — they explain what each section does,
+   since you're learning as we go!
+   ========================================================= */
+
+/* ---- 1. DESIGN TOKENS ----
+   These are variables. Change a color/font here once,
+   and it updates everywhere on the site automatically. */
+:root {
+  --color-bg: #EDEFEC;          /* warm light grey page background */
+  --color-surface: #FFFFFF;     /* white cards/panels */
+  --color-ink: #14171A;         /* near-black, main text */
+  --color-muted: #5B6360;       /* secondary/grey text */
+  --color-border: #D6DAD5;      /* light border/divider grey */
+  --color-green: #1F5C3E;       /* deep green — primary brand color */
+  --color-green-bright: #2F8F5B;/* brighter green — buttons/links/hover */
+  --color-green-dark: #123825;  /* darkest green — footer/nav bg */
+
+  --font-display: "Oswald", "Arial Narrow", sans-serif;   /* bold stencil-like headlines */
+  --font-body: "Work Sans", "Segoe UI", sans-serif;        /* clean readable body text */
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;  /* manifest/data-style text */
+
+  --radius: 4px;
+  --max-width: 1120px;
+}
+
+/* ---- 2. RESET & BASE ----
+   Browsers add their own default spacing/fonts. We reset
+   that so our design looks the same everywhere. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--color-bg);
+  color: var(--color-ink);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: inherit; text-decoration: none; }
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+h1, h2, h3 {
+  font-family: var(--font-display);
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  line-height: 1.1;
+}
+
+/* ---- 3. NAVIGATION ---- */
+.site-header {
+  background: var(--color-green-dark);
+  color: #fff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.nav-logo {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  color: #fff;
+}
+
+.nav-logo span {
+  color: var(--color-green-bright);
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nav-links a {
+  color: #e7e9e5;
+  padding-bottom: 4px;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #fff;
+  border-bottom-color: var(--color-green-bright);
+}
+
+/* Mobile nav: stack and shrink gaps */
+@media (max-width: 640px) {
+  .nav { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .nav-links { gap: 18px; flex-wrap: wrap; }
+}
+
+/* ---- 4. HERO SECTION ---- */
+.hero {
+  padding: 88px 0 64px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-green);
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.2rem, 5vw, 3.6rem);
+  max-width: 14ch;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  max-width: 56ch;
+  color: var(--color-muted);
+  font-size: 1.1rem;
+  margin-bottom: 32px;
+}
+
+/* ---- 5. BUTTONS ---- */
+.btn {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 14px 28px;
+  border-radius: var(--radius);
+  border: 2px solid var(--color-green);
+  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-primary {
+  background: var(--color-green);
+  color: #fff;
+}
+
+.btn-primary:hover {
+  background: var(--color-green-bright);
+  border-color: var(--color-green-bright);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--color-green);
+}
+
+.btn-secondary:hover {
+  background: var(--color-green);
+  color: #fff;
+}
+
+/* ---- 6. MANIFEST STRIP ----
+   The "signature" design element: a scrolling ticker styled
+   like a cargo shipping label, listing product categories
+   and bulk quantities. */
+.manifest-strip {
+  background: var(--color-ink);
+  color: #fff;
+  overflow: hidden;
+  white-space: nowrap;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.manifest-track {
+  display: inline-flex;
+  gap: 48px;
+  padding: 14px 0;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+  animation: scroll-left 28s linear infinite;
+}
+
+.manifest-track span {
+  color: var(--color-green-bright);
+  margin-right: 8px;
+}
+
+@keyframes scroll-left {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .manifest-track { animation: none; }
+}
+
+/* ---- 7. SECTIONS ---- */
+.section {
+  padding: 72px 0;
+}
+
+.section-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-green);
+  margin-bottom: 12px;
+}
+
+.section h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  margin-bottom: 16px;
+}
+
+.section-intro {
+  max-width: 60ch;
+  color: var(--color-muted);
+  margin-bottom: 40px;
+}
+
+/* ---- 8. GRID / CARDS ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 24px;
+}
+
+.card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-green);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  font-size: 1.05rem;
+  margin-bottom: 8px;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+.card p {
+  color: var(--color-muted);
+  font-size: 0.95rem;
+}
+
+/* ---- 9. STATS ROW ---- */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 24px;
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+  padding: 40px 0;
+}
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: 2.2rem;
+  color: var(--color-green);
+}
+
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  color: var(--color-muted);
+  letter-spacing: 0.05em;
+}
+
+/* ---- 10. CONTACT FORM ---- */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+@media (max-width: 720px) {
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+.contact-detail {
+  margin-bottom: 24px;
+}
+
+.contact-detail .card-tag { margin-bottom: 6px; }
+
+.contact-detail a,
+.contact-detail p {
+  font-size: 1.05rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+label {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-muted);
+  margin-bottom: 6px;
+  display: block;
+}
+
+input, textarea {
+  width: 100%;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  background: var(--color-surface);
+  color: var(--color-ink);
+}
+
+input:focus, textarea:focus {
+  outline: 2px solid var(--color-green-bright);
+  outline-offset: 1px;
+}
+
+textarea { min-height: 140px; resize: vertical; }
+
+.form-note {
+  font-size: 0.85rem;
+  color: var(--color-muted);
+}
+
+/* ---- 11. FOOTER ---- */
+.site-footer {
+  background: var(--color-green-dark);
+  color: #d8dcd7;
+  padding: 40px 0;
+  margin-top: 40px;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+}
+
+.footer-inner a:hover { color: #fff; }
