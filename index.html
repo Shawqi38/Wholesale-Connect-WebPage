@@ -4,139 +4,182 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- These two tags below are what Google reads to know what your
-       page is about — important for showing up in search results. -->
-  <title>Wholesale Connect LLC | Bulk Electronics Wholesale Supplier</title>
-  <meta name="description" content="Wholesale Connect LLC supplies bulk quantities of iPhones, laptops, iPads, headphones, Starlink kits, and Amazon Echo devices to retailers and resellers.">
+  <!-- The title and description below are what Google shows in search results. -->
+  <title>Wholesale Connect LLC | Bulk Electronics Wholesale in Miami, FL</title>
+  <meta name="description" content="Wholesale Connect LLC supplies brand new, factory sealed electronics in bulk to wholesalers and distributors: iPhones, tablets, laptops, headphones, streaming devices, gaming consoles, and more. Miami, FL.">
+  <meta name="theme-color" content="#1C1E21">
+  <meta property="og:title" content="Wholesale Connect LLC | Bulk Electronics Wholesale">
+  <meta property="og:description" content="Brand new, factory sealed electronics for wholesalers and distributors. Ships US and international. Miami, FL.">
+  <meta property="og:type" content="website">
 
+  <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&family=Work+Sans:wght@400;500&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
+  <!-- Icon font (the little pictures on the cards) -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
-  <!-- ===== NAVIGATION (same on every page) ===== -->
+  <!-- ===== HEADER (same on every page) ===== -->
   <header class="site-header">
     <nav class="nav">
-      <a href="index.html" class="nav-logo">Wholesale<span>Connect</span></a>
-      <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+      <a href="index.html" class="logo">
+        <img src="logo-icon.svg" alt="">
+        <span>Wholesale <b>Connect</b></span>
+      </a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#how-to-buy">How to Buy</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <a href="tel:+19549983942" class="nav-phone">(954) 998-3942</a>
+        <a href="contact.html" class="btn btn-amber">Request a Quote</a>
+      </div>
     </nav>
   </header>
 
   <!-- ===== HERO ===== -->
   <section class="hero">
     <div class="container">
-      <p class="hero-eyebrow">Bulk Electronics Wholesale</p>
-      <h1>Hot-selling tech, moved in serious quantity.</h1>
-      <p>Wholesale Connect LLC supplies retailers, resellers, and distributors with large-quantity lots of today's highest-demand electronics — sourced reliably, priced for volume, shipped fast.</p>
-      <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+      <p class="kicker">Miami, FL Wholesale Electronics</p>
+      <h1>Bulk Electronics for Distributors</h1>
+      <p class="lead">Brand new, factory sealed tablets, laptops, iPhones, headphones, streaming devices, and gaming consoles. Hard-to-find and limited-quantity items included.</p>
+      <div class="hero-actions">
+        <a href="contact.html" class="btn btn-amber">Request a Quote</a>
+        <a href="tel:+19549983942" class="btn btn-outline">Call (954) 998-3942</a>
+      </div>
     </div>
   </section>
 
-  <!-- ===== MANIFEST STRIP (signature design element) ===== -->
-  <div class="manifest-strip" aria-hidden="true">
-    <div class="manifest-track">
-      <!-- Duplicated once so the scroll loop has no visible seam -->
-      <span>MANIFEST //</span>
-      <span>·</span> IPHONES <span>× 500+</span>
-      <span>·</span> LAPTOPS <span>× 300+</span>
-      <span>·</span> IPADS <span>× 400+</span>
-      <span>·</span> HEADPHONES <span>× 1,000+</span>
-      <span>·</span> STARLINK KITS <span>× 150+</span>
-      <span>·</span> ECHO DOTS <span>× 800+</span>
-      <span>MANIFEST //</span>
-      <span>·</span> IPHONES <span>× 500+</span>
-      <span>·</span> LAPTOPS <span>× 300+</span>
-      <span>·</span> IPADS <span>× 400+</span>
-      <span>·</span> HEADPHONES <span>× 1,000+</span>
-      <span>·</span> STARLINK KITS <span>× 150+</span>
-      <span>·</span> ECHO DOTS <span>× 800+</span>
-    </div>
+  <!-- ===== TRUST STRIP ===== -->
+  <div class="trust">
+    <div><b>7 Years</b>in business</div>
+    <div><b>12 Years</b>in the market</div>
+    <div><b>24 Hours</b>response time</div>
+    <div><b>References</b>available on request</div>
   </div>
 
-  <!-- ===== PRODUCT CATEGORIES ===== -->
+  <!-- ===== CATEGORIES ===== -->
   <section class="section">
     <div class="container">
-      <p class="section-label">What we move</p>
-      <h2>Current top categories</h2>
-      <p class="section-intro">A snapshot of the product lines we regularly supply in bulk. Availability and pricing depend on quantity — reach out for a current lot list.</p>
+      <p class="kicker">What We Move</p>
+      <h2>Categories We Supply in Bulk</h2>
+      <p class="intro">These are our main categories, and we source far more than what's listed. Pricing and availability depend on quantity, so send us a request and we'll quote you.</p>
 
       <div class="grid">
         <div class="card">
-          <span class="card-tag">Mobile</span>
+          <div class="icon-box"><i class="ti ti-device-mobile" aria-hidden="true"></i></div>
           <h3>iPhones</h3>
-          <p>Current and recent generation models, available in mixed or single-SKU pallets.</p>
+          <span class="sub">Brand new, factory sealed</span>
         </div>
         <div class="card">
-          <span class="card-tag">Computing</span>
+          <div class="icon-box"><i class="ti ti-device-tablet" aria-hidden="true"></i></div>
+          <h3>Tablets and iPads</h3>
+          <span class="sub">Brand new, factory sealed</span>
+        </div>
+        <div class="card">
+          <div class="icon-box"><i class="ti ti-device-laptop" aria-hidden="true"></i></div>
           <h3>Laptops</h3>
-          <p>Popular consumer and business laptop lines, ready for bulk resale.</p>
+          <span class="sub">MacBook, Asus, LG, Dell, Samsung, and more</span>
         </div>
         <div class="card">
-          <span class="card-tag">Tablets</span>
-          <h3>iPads</h3>
-          <p>High-turnover tablet stock across current models and storage sizes.</p>
-        </div>
-        <div class="card">
-          <span class="card-tag">Audio</span>
+          <div class="icon-box"><i class="ti ti-headphones" aria-hidden="true"></i></div>
           <h3>Headphones</h3>
-          <p>Top-selling wired and wireless headphone brands, priced for volume.</p>
+          <span class="sub">Brand new, factory sealed</span>
         </div>
         <div class="card">
-          <span class="card-tag">Connectivity</span>
-          <h3>Starlink Kits</h3>
-          <p>Complete satellite internet kits, in demand across residential and remote markets.</p>
+          <div class="icon-box"><i class="ti ti-device-tv" aria-hidden="true"></i></div>
+          <h3>Streaming Devices and Starlink</h3>
+          <span class="sub">ONN 4K, Roku, Starlink, and more</span>
         </div>
         <div class="card">
-          <span class="card-tag">Smart Home</span>
-          <h3>Amazon Echo Dots</h3>
-          <p>Fast-moving smart speaker units, ideal for bundle and retail resale.</p>
+          <div class="icon-box"><i class="ti ti-home" aria-hidden="true"></i></div>
+          <h3>Smart Home</h3>
+          <span class="sub">Amazon Echo Dots and more</span>
         </div>
+        <div class="card">
+          <div class="icon-box"><i class="ti ti-device-gamepad-2" aria-hidden="true"></i></div>
+          <h3>Gaming Consoles</h3>
+          <span class="sub">Xbox, PS5, Nintendo</span>
+        </div>
+        <a href="contact.html" class="card dark">
+          <div class="icon-box"><i class="ti ti-search" aria-hidden="true"></i></div>
+          <h3>And Much More</h3>
+          <span class="sub">Don't see it? Ask us. We source hard-to-find items.</span>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- ===== STATS / TRUST ROW ===== -->
-  <section class="container">
-    <div class="stats">
-      <div>
-        <div class="stat-number">Bulk</div>
-        <div class="stat-label">Order Minimums</div>
-      </div>
-      <div>
-        <div class="stat-number">Fast</div>
-        <div class="stat-label">Turnaround</div>
-      </div>
-      <div>
-        <div class="stat-number">Direct</div>
-        <div class="stat-label">Sourcing</div>
-      </div>
-      <div>
-        <div class="stat-number">Reliable</div>
-        <div class="stat-label">Supply</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== CTA ===== -->
-  <section class="section">
+  <!-- ===== HOW TO BUY ===== -->
+  <section class="section" id="how-to-buy" style="padding-top: 0;">
     <div class="container">
-      <p class="section-label">Ready to order</p>
-      <h2>Let's talk quantity and pricing.</h2>
-      <p class="section-intro">Send us the products and quantities you're looking for, and we'll get back to you with current availability and bulk pricing.</p>
-      <a href="contact.html" class="btn btn-primary">Contact Us</a>
+      <p class="kicker">How to Buy</p>
+      <h2>Simple for Verified Businesses</h2>
+      <p class="intro">We work with wholesalers and distributors. Here's how an order works from start to finish.</p>
+
+      <div class="grid">
+        <div class="step">
+          <div class="num">1</div>
+          <div><h3>Request a Quote</h3><p>Tell us what you need and how many. We respond within 24 hours.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">2</div>
+          <div><h3>Verify Your Business</h3><p>A registered business and a resale certificate are required.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">3</div>
+          <div><h3>Pay by ACH or Wire</h3><p>Payment is by ACH or wire transfer.</p></div>
+        </div>
+        <div class="step">
+          <div class="num">4</div>
+          <div><h3>Ship or Pick Up</h3><p>We ship across the US and internationally. Local Miami drop-off is also available.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CTA BAND ===== -->
+  <section class="cta-band">
+    <div class="container cta-inner">
+      <div>
+        <h2>Looking for something specific?</h2>
+        <p>Send us the products and quantities and we'll get back to you.</p>
+      </div>
+      <a href="contact.html" class="btn btn-dark">Request a Quote</a>
     </div>
   </section>
 
   <!-- ===== FOOTER (same on every page) ===== -->
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <span>© 2026 Wholesale Connect LLC</span>
-      <span><a href="mailto:Wholesaleconnect@gmail.com">Wholesaleconnect@gmail.com</a> · <a href="tel:5619550555">561-955-0555</a></span>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4>Wholesale Connect LLC</h4>
+          <p>Bulk electronics for wholesalers and distributors. Miami, FL.</p>
+        </div>
+        <div>
+          <h4>Pages</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#how-to-buy">How to Buy</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul>
+            <li><a href="tel:+19549983942">(954) 998-3942</a></li>
+            <li><a href="mailto:wholesaleconnectll@gmail.com">wholesaleconnectll@gmail.com</a></li>
+            <li>We respond within 24 hours</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">© 2026 Wholesale Connect LLC. All rights reserved.</div>
     </div>
   </footer>
 

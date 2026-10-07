@@ -1,54 +1,43 @@
 /* =========================================================
-   WHOLESALE CONNECT LLC — SHARED STYLESHEET
-   This one file styles all three pages (index, about, contact).
-   Read the comments — they explain what each section does,
-   since you're learning as we go!
+   WHOLESALE CONNECT LLC — SHARED STYLESHEET (charcoal + amber)
+   One file styles all three pages. Change a color or font in
+   the ":root" block below and it updates the whole site.
    ========================================================= */
 
-/* ---- 1. DESIGN TOKENS ----
-   These are variables. Change a color/font here once,
-   and it updates everywhere on the site automatically. */
+/* ---- 1. DESIGN TOKENS (your brand colors live here) ---- */
 :root {
-  --color-bg: #EDEFEC;          /* warm light grey page background */
-  --color-surface: #FFFFFF;     /* white cards/panels */
-  --color-ink: #14171A;         /* near-black, main text */
-  --color-muted: #5B6360;       /* secondary/grey text */
-  --color-border: #D6DAD5;      /* light border/divider grey */
-  --color-green: #1F5C3E;       /* deep green — primary brand color */
-  --color-green-bright: #2F8F5B;/* brighter green — buttons/links/hover */
-  --color-green-dark: #123825;  /* darkest green — footer/nav bg */
+  --charcoal: #1C1E21;        /* header, footer, dark sections */
+  --charcoal-2: #26292D;      /* hero background */
+  --amber: #E39A2D;           /* main brand color: buttons, logo */
+  --amber-light: #F5B04C;     /* highlights on dark backgrounds */
+  --amber-deep: #B45309;      /* amber text on light backgrounds */
+  --amber-tint: #FBEBD0;      /* pale amber behind icons */
+  --amber-ink: #8A4B08;       /* icon color on pale amber */
+  --bg: #F4F3F0;             /* page background (warm light grey) */
+  --surface: #FFFFFF;         /* cards */
+  --border: #DEDBD4;          /* thin dividing lines */
+  --muted: #66645F;           /* secondary text */
+  --muted-on-dark: #C9CBCE;   /* secondary text on dark backgrounds */
 
-  --font-display: "Oswald", "Arial Narrow", sans-serif;   /* bold stencil-like headlines */
-  --font-body: "Work Sans", "Segoe UI", sans-serif;        /* clean readable body text */
-  --font-mono: "IBM Plex Mono", "Courier New", monospace;  /* manifest/data-style text */
-
-  --radius: 4px;
-  --max-width: 1120px;
+  --font: "Work Sans", "Segoe UI", Arial, sans-serif;
+  --font-mono: "IBM Plex Mono", "Courier New", monospace;
+  --radius: 6px;
+  --max-width: 1080px;
 }
 
-/* ---- 2. RESET & BASE ----
-   Browsers add their own default spacing/fonts. We reset
-   that so our design looks the same everywhere. */
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
+/* ---- 2. RESET & BASE ---- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
-  font-family: var(--font-body);
-  background: var(--color-bg);
-  color: var(--color-ink);
+  font-family: var(--font);
+  background: var(--bg);
+  color: var(--charcoal);
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
 }
 
 img { max-width: 100%; display: block; }
-
 a { color: inherit; text-decoration: none; }
 
 .container {
@@ -57,16 +46,21 @@ a { color: inherit; text-decoration: none; }
   padding: 0 24px;
 }
 
-h1, h2, h3 {
-  font-family: var(--font-display);
+h1, h2, h3 { font-weight: 500; line-height: 1.2; }
+
+/* Small uppercase label that sits above headings */
+.kicker {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
-  letter-spacing: 0.02em;
-  line-height: 1.1;
+  color: var(--amber-deep);
+  margin-bottom: 8px;
 }
 
-/* ---- 3. NAVIGATION ---- */
+/* ---- 3. HEADER / NAVIGATION ---- */
 .site-header {
-  background: var(--color-green-dark);
+  background: var(--charcoal);
   color: #fff;
   position: sticky;
   top: 0;
@@ -74,314 +68,191 @@ h1, h2, h3 {
 }
 
 .nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 18px 24px;
-  max-width: var(--max-width);
-  margin: 0 auto;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-.nav-logo {
-  font-family: var(--font-display);
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-  color: #fff;
-}
-
-.nav-logo span {
-  color: var(--color-green-bright);
-}
-
-.nav-links {
+.logo {
   display: flex;
-  gap: 32px;
-  list-style: none;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.15rem;
+}
+.logo img { width: 36px; height: 36px; }
+.logo b { font-weight: 600; color: var(--amber-light); }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  flex-wrap: wrap;
+  font-size: 0.9rem;
 }
 
-.nav-links a {
-  color: #e7e9e5;
-  padding-bottom: 4px;
-  border-bottom: 2px solid transparent;
-  transition: border-color 0.2s ease, color 0.2s ease;
-}
+.nav-links { display: flex; gap: 20px; list-style: none; }
+.nav-links a { padding: 4px 0; border-bottom: 2px solid transparent; color: #E6E7E8; }
+.nav-links a:hover, .nav-links a.active { color: #fff; border-bottom-color: var(--amber); }
 
-.nav-links a:hover,
-.nav-links a.active {
-  color: #fff;
-  border-bottom-color: var(--color-green-bright);
-}
+.nav-phone { color: var(--amber-light); font-weight: 500; }
+.nav-phone:hover { color: #fff; }
 
-/* Mobile nav: stack and shrink gaps */
-@media (max-width: 640px) {
-  .nav { flex-direction: column; gap: 12px; align-items: flex-start; }
-  .nav-links { gap: 18px; flex-wrap: wrap; }
-}
-
-/* ---- 4. HERO SECTION ---- */
-.hero {
-  padding: 88px 0 64px;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.hero-eyebrow {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-green);
-  margin-bottom: 16px;
-}
-
-.hero h1 {
-  font-size: clamp(2.2rem, 5vw, 3.6rem);
-  max-width: 14ch;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  max-width: 56ch;
-  color: var(--color-muted);
-  font-size: 1.1rem;
-  margin-bottom: 32px;
-}
-
-/* ---- 5. BUTTONS ---- */
+/* ---- 4. BUTTONS ---- */
 .btn {
   display: inline-block;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 14px 28px;
+  font-family: var(--font);
+  font-size: 0.92rem;
+  font-weight: 500;
+  padding: 11px 20px;
   border-radius: var(--radius);
-  border: 2px solid var(--color-green);
-  transition: background 0.2s ease, color 0.2s ease, transform 0.15s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
+.btn-amber { background: var(--amber); color: var(--charcoal); }
+.btn-amber:hover { background: var(--amber-light); }
+.btn-outline { border-color: #6B6E73; color: #fff; }
+.btn-outline:hover { border-color: var(--amber-light); color: var(--amber-light); }
+.btn-dark { background: var(--charcoal); color: #fff; }
+.btn-dark:hover { background: #000; }
 
-.btn-primary {
-  background: var(--color-green);
-  color: #fff;
+/* ---- 5. HERO ---- */
+.hero { background: var(--charcoal-2); color: #fff; padding: 72px 0 64px; }
+.hero .kicker { color: var(--amber-light); }
+.hero h1 { font-size: clamp(2rem, 5vw, 3rem); max-width: 18ch; margin-bottom: 16px; }
+.hero p.lead { color: var(--muted-on-dark); font-size: 1.08rem; max-width: 56ch; margin-bottom: 28px; }
+.hero-actions { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* Smaller hero used on About and Contact pages */
+.hero.small { padding: 52px 0 44px; }
+.hero.small h1 { max-width: 22ch; }
+
+/* ---- 6. TRUST STRIP ---- */
+.trust {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--border);
+  border-bottom: 1px solid var(--border);
 }
+.trust div { background: var(--surface); padding: 16px 20px; font-size: 0.85rem; color: var(--muted); }
+.trust b { display: block; font-size: 1.05rem; font-weight: 500; color: var(--charcoal); }
 
-.btn-primary:hover {
-  background: var(--color-green-bright);
-  border-color: var(--color-green-bright);
-  transform: translateY(-1px);
-}
+/* ---- 7. SECTIONS & CARDS ---- */
+.section { padding: 56px 0; }
+.section h2 { font-size: clamp(1.4rem, 3vw, 1.9rem); margin-bottom: 8px; }
+.section .intro { color: var(--muted); max-width: 62ch; margin-bottom: 28px; }
 
-.btn-secondary {
-  background: transparent;
-  color: var(--color-green);
-}
-
-.btn-secondary:hover {
-  background: var(--color-green);
-  color: #fff;
-}
-
-/* ---- 6. MANIFEST STRIP ----
-   The "signature" design element: a scrolling ticker styled
-   like a cargo shipping label, listing product categories
-   and bulk quantities. */
-.manifest-strip {
-  background: var(--color-ink);
-  color: #fff;
-  overflow: hidden;
-  white-space: nowrap;
-  border-bottom: 1px solid var(--color-border);
-}
-
-.manifest-track {
-  display: inline-flex;
-  gap: 48px;
-  padding: 14px 0;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-  letter-spacing: 0.05em;
-  animation: scroll-left 28s linear infinite;
-}
-
-.manifest-track span {
-  color: var(--color-green-bright);
-  margin-right: 8px;
-}
-
-@keyframes scroll-left {
-  from { transform: translateX(0); }
-  to { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .manifest-track { animation: none; }
-}
-
-/* ---- 7. SECTIONS ---- */
-.section {
-  padding: 72px 0;
-}
-
-.section-label {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--color-green);
-  margin-bottom: 12px;
-}
-
-.section h2 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin-bottom: 16px;
-}
-
-.section-intro {
-  max-width: 60ch;
-  color: var(--color-muted);
-  margin-bottom: 40px;
-}
-
-/* ---- 8. GRID / CARDS ---- */
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 14px;
 }
 
 .card {
-  background: var(--color-surface);
-  border: 1px solid var(--color-border);
+  background: var(--surface);
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 24px;
+  padding: 20px;
+}
+.card h3 { font-size: 1.02rem; margin-bottom: 4px; }
+.card p, .card span.sub { font-size: 0.88rem; color: var(--muted); }
+
+.icon-box {
+  width: 40px; height: 40px;
+  border-radius: 8px;
+  background: var(--amber-tint);
+  color: var(--amber-ink);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px;
+  margin-bottom: 12px;
 }
 
-.card-tag {
+/* The dark "And Much More" card */
+.card.dark { background: var(--charcoal); border-color: var(--charcoal); transition: transform 0.15s ease; }
+.card.dark:hover { transform: translateY(-2px); }
+.card.dark h3 { color: #fff; }
+.card.dark span.sub { color: var(--muted-on-dark); }
+.card.dark .icon-box { background: var(--amber); color: var(--charcoal); }
+
+/* ---- 8. HOW TO BUY STEPS ---- */
+.step { display: flex; gap: 14px; align-items: flex-start; }
+.step .num {
+  flex: none;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  background: var(--charcoal);
+  color: var(--amber-light);
   font-family: var(--font-mono);
-  font-size: 0.75rem;
-  color: var(--color-green);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  display: block;
-  margin-bottom: 10px;
+  font-size: 0.85rem;
+  display: flex; align-items: center; justify-content: center;
 }
+.step h3 { font-size: 1rem; margin-bottom: 2px; }
+.step p { font-size: 0.88rem; color: var(--muted); }
 
-.card h3 {
-  font-size: 1.05rem;
-  margin-bottom: 8px;
-  text-transform: none;
-  letter-spacing: 0;
-}
+/* ---- 9. CALL-TO-ACTION BAND ---- */
+.cta-band { background: var(--amber); padding: 32px 0; }
+.cta-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.cta-inner h2 { font-size: 1.4rem; margin: 0; }
+.cta-inner p { color: #3A2A10; }
 
-.card p {
-  color: var(--color-muted);
-  font-size: 0.95rem;
-}
+/* ---- 10. ABOUT PAGE ---- */
+.prose { max-width: 68ch; }
+.prose p { margin-bottom: 16px; color: #33353A; }
 
-/* ---- 9. STATS ROW ---- */
-.stats {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 24px;
-  border-top: 1px solid var(--color-border);
-  border-bottom: 1px solid var(--color-border);
-  padding: 40px 0;
-}
+/* ---- 11. CONTACT PAGE ---- */
+.contact-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: 36px; align-items: start; }
+@media (max-width: 800px) { .contact-grid { grid-template-columns: 1fr; } }
 
-.stat-number {
-  font-family: var(--font-display);
-  font-size: 2.2rem;
-  color: var(--color-green);
-}
+.info-row { display: flex; gap: 14px; align-items: flex-start; margin-bottom: 20px; }
+.info-row .icon-box { margin: 0; flex: none; }
+.info-row h3 { font-size: 0.82rem; font-family: var(--font-mono); font-weight: 400; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); margin-bottom: 2px; }
+.info-row a, .info-row p { font-size: 1.02rem; }
+.info-row a:hover { color: var(--amber-deep); }
 
-.stat-label {
-  font-family: var(--font-mono);
-  font-size: 0.8rem;
-  text-transform: uppercase;
-  color: var(--color-muted);
-  letter-spacing: 0.05em;
-}
+form { display: flex; flex-direction: column; gap: 16px; }
+.two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 560px) { .two { grid-template-columns: 1fr; } }
 
-/* ---- 10. CONTACT FORM ---- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-}
-
-@media (max-width: 720px) {
-  .contact-grid { grid-template-columns: 1fr; }
-}
-
-.contact-detail {
-  margin-bottom: 24px;
-}
-
-.contact-detail .card-tag { margin-bottom: 6px; }
-
-.contact-detail a,
-.contact-detail p {
-  font-size: 1.05rem;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
-label {
-  font-family: var(--font-mono);
-  font-size: 0.75rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--color-muted);
-  margin-bottom: 6px;
-  display: block;
-}
+label { display: block; font-size: 0.82rem; font-weight: 500; margin-bottom: 6px; }
+label small { font-weight: 400; color: var(--muted); }
 
 input, textarea {
   width: 100%;
-  font-family: var(--font-body);
+  font-family: var(--font);
   font-size: 1rem;
-  padding: 12px 14px;
-  border: 1px solid var(--color-border);
+  padding: 11px 13px;
+  border: 1px solid var(--border);
   border-radius: var(--radius);
-  background: var(--color-surface);
-  color: var(--color-ink);
+  background: #fff;
+  color: var(--charcoal);
 }
-
-input:focus, textarea:focus {
-  outline: 2px solid var(--color-green-bright);
-  outline-offset: 1px;
-}
-
+input:focus, textarea:focus { outline: 2px solid var(--amber); outline-offset: 1px; }
 textarea { min-height: 140px; resize: vertical; }
 
-.form-note {
-  font-size: 0.85rem;
-  color: var(--color-muted);
+.form-note { font-size: 0.82rem; color: var(--muted); }
+.hp { position: absolute; left: -9999px; }  /* hidden spam trap field */
+
+.notice {
+  background: var(--amber-tint);
+  border: 1px solid #EBCB93;
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  font-size: 0.9rem;
+  color: #5A3A0B;
+  margin-bottom: 20px;
 }
 
-/* ---- 11. FOOTER ---- */
-.site-footer {
-  background: var(--color-green-dark);
-  color: #d8dcd7;
-  padding: 40px 0;
-  margin-top: 40px;
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 16px;
-  font-family: var(--font-mono);
-  font-size: 0.85rem;
-}
-
-.footer-inner a:hover { color: #fff; }
+/* ---- 12. FOOTER ---- */
+.site-footer { background: var(--charcoal); color: var(--muted-on-dark); padding: 36px 0 28px; font-size: 0.88rem; }
+.footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 28px; margin-bottom: 24px; }
+.site-footer h4 { color: #fff; font-weight: 500; font-size: 0.9rem; margin-bottom: 10px; }
+.site-footer a:hover { color: var(--amber-light); }
+.site-footer ul { list-style: none; }
+.site-footer li { margin-bottom: 6px; }
+.footer-bottom { border-top: 1px solid #34373B; padding-top: 16px; font-size: 0.8rem; }
