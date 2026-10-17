@@ -1,152 +1,149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Request a Quote | Wholesale Connect LLC</title>
-  <meta name="description" content="Request a bulk quote from Wholesale Connect LLC. Call (954) 998-3942, email, or use the form. We respond within 24 hours.">
+  <title>Solicitar cotización | Wholesale Connect LLC</title>
+  <meta name="description" content="Solicite una cotización al por mayor a Wholesale Connect LLC en Miami, FL. Llame al (954) 998-3942, escriba o use el formulario. Respondemos en 24 horas.">
   <meta name="theme-color" content="#1C1E21">
-
-  <link rel="icon" type="image/svg+xml" href="logo-icon.svg">
+  <meta property="og:title" content="Solicitar cotización | Wholesale Connect LLC">
+  <meta property="og:description" content="Solicite una cotización al por mayor a Wholesale Connect LLC en Miami, FL. Llame al (954) 998-3942, escriba o use el formulario. Respondemos en 24 horas.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="../logo-icon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span class="tb-left">Miami, FL · Nuevos y sellados de fábrica · Respondemos en 24 horas</span>
+      <span class="tb-right">
+        <a href="tel:+19549983942">(954) 998-3942</a>
+        <a href="mailto:wholesaleconnectll@gmail.com" class="tb-email">wholesaleconnectll@gmail.com</a>
+        <a href="../contact.html" class="tb-lang" hreflang="en">English</a>
+      </span>
+    </div>
+  </div>
   <header class="site-header">
     <nav class="nav">
-      <a href="index.html" class="logo">
-        <img src="logo-icon.svg" alt="">
-        <span>Wholesale <b>Connect</b></span>
-      </a>
+      <a href="index.html" class="logo"><img src="../logo-icon.svg" alt=""><span>Wholesale <b>Connect</b></span></a>
       <div class="nav-right">
         <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html#how-to-buy">How to Buy</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="products.html">Productos</a></li>
+          <li><a href="about.html">Nosotros</a></li>
+          <li><a href="become-a-customer.html">Hágase cliente</a></li>
+          <li><a href="contact.html" class="active">Contacto</a></li>
         </ul>
-        <a href="tel:+19549983942" class="nav-phone">(954) 998-3942</a>
-        <a href="contact.html" class="btn btn-amber">Request a Quote</a>
+        <a href="contact.html" class="btn btn-amber">Solicitar cotización</a>
       </div>
     </nav>
   </header>
-
   <section class="hero small">
     <div class="container">
-      <p class="kicker">Contact Us</p>
-      <h1>Request a Quote</h1>
-      <p class="lead">Call, email, or send the form. Tell us what you need and how many, and we'll respond within 24 hours.</p>
+      <p class="kicker">Contacto</p>
+      <h1>Solicitar cotización</h1>
+      <p class="lead">Llame, escriba o use el formulario. Díganos qué necesita y cuántas unidades, y le respondemos en 24 horas.</p>
     </div>
   </section>
 
   <section class="section">
     <div class="container contact-grid">
 
-      <!-- LEFT: direct contact details -->
       <div>
         <div class="info-row">
           <div class="icon-box"><i class="ti ti-phone" aria-hidden="true"></i></div>
-          <div><h3>Phone</h3><a href="tel:+19549983942">(954) 998-3942</a></div>
+          <div><h3>Teléfono</h3><a href="tel:+19549983942">(954) 998-3942</a></div>
         </div>
         <div class="info-row">
           <div class="icon-box"><i class="ti ti-mail" aria-hidden="true"></i></div>
-          <div><h3>Email</h3><a href="mailto:wholesaleconnectll@gmail.com">wholesaleconnectll@gmail.com</a></div>
+          <div><h3>Correo electrónico</h3><a href="mailto:wholesaleconnectll@gmail.com">wholesaleconnectll@gmail.com</a></div>
         </div>
         <div class="info-row">
           <div class="icon-box"><i class="ti ti-clock" aria-hidden="true"></i></div>
-          <div><h3>Response Time</h3><p>Within 24 hours</p></div>
+          <div><h3>Tiempo de respuesta</h3><p>En 24 horas</p></div>
         </div>
         <div class="info-row">
           <div class="icon-box"><i class="ti ti-map-pin" aria-hidden="true"></i></div>
-          <div><h3>Location</h3><p>Miami, FL. Local drop-off available.</p></div>
+          <div><h3>Ubicación</h3><p>Miami, FL. Entrega local disponible en Miami.</p></div>
         </div>
-
-        <div class="notice">
-          <b>Before you order:</b> a registered business and a resale certificate are required. Payment is by ACH or wire. References are available on request.
-        </div>
+        <div class="notice"><b>Antes de ordenar:</b> se requiere una empresa registrada y un certificado de reventa. El pago es por ACH o transferencia (wire). Referencias disponibles a solicitud.</div>
       </div>
 
-      <!-- RIGHT: quote request form -->
       <div class="card">
-        <!--
-          HOW THIS FORM REACHES YOUR EMAIL:
-          The "action" below points to your Formspree form. Formspree
-          receives each submission and forwards it to your inbox.
-          If you ever create a new form, replace the ID at the end of
-          this link (the part after /f/) with the new one.
-        -->
+        <!-- This form sends to your Formspree form, which emails it to your inbox. -->
         <form action="https://formspree.io/f/xppqqrqa" method="POST">
-          <input type="hidden" name="_subject" value="New quote request from wholesaleconnect website">
-
+          <input type="hidden" name="_subject" value="New quote request from wholesaleconnect website (Spanish page)">
           <div class="two">
-            <div>
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" required>
-            </div>
-            <div>
-              <label for="company">Company</label>
-              <input type="text" id="company" name="company" required>
-            </div>
+            <div><label for="name">Nombre</label><input type="text" id="name" name="name" required></div>
+            <div><label for="company">Empresa</label><input type="text" id="company" name="company" required></div>
           </div>
-
           <div class="two">
-            <div>
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" required>
-            </div>
-            <div>
-              <label for="phone">Phone <small>(optional)</small></label>
-              <input type="tel" id="phone" name="phone">
-            </div>
+            <div><label for="email">Correo electrónico</label><input type="email" id="email" name="email" required></div>
+            <div><label for="phone">Teléfono <small>(opcional)</small></label><input type="tel" id="phone" name="phone"></div>
           </div>
-
           <div>
-            <label for="request">Products and quantities needed</label>
-            <textarea id="request" name="request" placeholder="Example: 200 iPhones, 100 Echo Dots, 50 Roku devices" required></textarea>
+            <label for="request">Productos y cantidades que necesita</label>
+            <textarea id="request" name="request" placeholder="Ejemplo: 200 iPhones, 100 Echo Dots, 50 dispositivos Roku" required></textarea>
           </div>
-
-          <!-- Hidden spam trap: real visitors never see or fill this in -->
           <input type="text" name="_gotcha" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
-
-          <button type="submit" class="btn btn-amber">Send Request</button>
-          <p class="form-note">We respond within 24 hours. Your information is only used to reply to your request.</p>
+          <button type="submit" class="btn btn-amber">Enviar solicitud</button>
+          <p class="form-note">Respondemos en 24 horas. Su información solo se usa para responder a su solicitud.</p>
         </form>
       </div>
 
     </div>
   </section>
 
+  <script>
+    // If someone clicked "Request a quote" on a product card, pre-fill the form with that item.
+    (function () {
+      var item = new URLSearchParams(window.location.search).get("item");
+      var box = document.getElementById("request");
+      if (item && box) {
+        box.value = "Me interesa: " + item + "\nCantidad: ";
+      }
+    })();
+  </script>
+
   <footer class="site-footer">
     <div class="container">
       <div class="footer-grid">
         <div>
           <h4>Wholesale Connect LLC</h4>
-          <p>Bulk electronics for wholesalers and distributors. Miami, FL.</p>
+          <p>Electrónica al por mayor para mayoristas y distribuidores. Miami, FL.</p>
         </div>
         <div>
-          <h4>Pages</h4>
+          <h4>Páginas</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="index.html#how-to-buy">How to Buy</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="products.html">Productos</a></li>
+            <li><a href="about.html">Nosotros</a></li>
+            <li><a href="become-a-customer.html">Hágase cliente</a></li>
+            <li><a href="contact.html">Contacto</a></li>
           </ul>
         </div>
         <div>
-          <h4>Contact</h4>
+          <h4>Contacto</h4>
           <ul>
             <li><a href="tel:+19549983942">(954) 998-3942</a></li>
             <li><a href="mailto:wholesaleconnectll@gmail.com">wholesaleconnectll@gmail.com</a></li>
-            <li>We respond within 24 hours</li>
+            <li>Miami, FL</li>
+            <li>Respondemos en 24 horas</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Idioma</h4>
+          <ul>
+            <li><a href="../index.html">English</a></li>
+            <li><a href="index.html">Español</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">© 2026 Wholesale Connect LLC. All rights reserved.</div>
+      <div class="footer-bottom">© 2026 Wholesale Connect LLC. Todos los derechos reservados.</div>
     </div>
   </footer>
-
 </body>
 </html>

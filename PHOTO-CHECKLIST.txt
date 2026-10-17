@@ -1,0 +1,43 @@
+PHOTO CHECKLIST FOR WHOLESALE CONNECT
+========================================
+
+How it works: every photo spot on the site already has a name. Until you add a real photo,
+the site shows a placeholder drawing. When you add a photo with the exact file name below,
+the site shows your photo instead, with the charcoal/amber tint applied automatically.
+
+Photo rules:
+  - File type: .jpg   (not .png or .jpeg; rename or ask Claude to convert)
+  - Shape: landscape, roughly 4:3 (for example 1200 x 900 pixels)
+  - Keep each file under about 400 KB so the site loads fast
+  - Put every photo in the 'images' folder in the GitHub repo
+  - No visible people or faces; avoid photos of other companies' logos
+
+FILES (file name -> where it appears)
+----------------------------------------
+  images/cat-gaming.jpg
+  images/cat-headphones.jpg
+  images/cat-iphones.jpg
+  images/cat-laptops.jpg
+  images/cat-more.jpg
+  images/cat-smarthome.jpg
+  images/cat-streaming.jpg
+  images/cat-tablets.jpg
+  images/hero.jpg
+  images/prod-airpods.jpg
+  images/prod-echo-dot.jpg
+  images/prod-headphones.jpg
+  images/prod-ipad.jpg
+  images/prod-iphone-18-pro-max.jpg
+  images/prod-iphone-duo.jpg
+  images/prod-iphone-more.jpg
+  images/prod-laptop-asus.jpg
+  images/prod-laptop-dell.jpg
+  images/prod-laptop-lenovo.jpg
+  images/prod-laptop-lg.jpg
+  images/prod-laptop-samsung.jpg
+  images/prod-macbook.jpg
+  images/prod-nintendo.jpg
+  images/prod-ps5.jpg
+  images/prod-starlink.jpg
+  images/prod-streaming.jpg
+  images/prod-xbox.jpg
