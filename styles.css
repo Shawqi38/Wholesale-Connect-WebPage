@@ -338,3 +338,18 @@ textarea { min-height: 140px; resize: vertical; }
 .checklist { list-style: none; margin-top: 10px; }
 .checklist li { padding: 6px 0 6px 26px; position: relative; font-size: 0.92rem; }
 .checklist li::before { content: "\2713"; position: absolute; left: 0; color: var(--amber-deep); font-weight: 600; }
+
+/* ---- Jump menu on the Products page ---- */
+.jump { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 22px; }
+.jump span { font-family: var(--font-mono); font-size: 0.75rem; letter-spacing: 0.08em; text-transform: uppercase; color: var(--amber-light); margin-right: 4px; }
+.jump a {
+  border: 1px solid #5A5D62; border-radius: 999px; padding: 6px 14px;
+  font-size: 0.85rem; color: #fff; transition: border-color 0.15s ease, color 0.15s ease;
+}
+.jump a:hover { border-color: var(--amber-light); color: var(--amber-light); }
+.group { scroll-margin-top: 80px; }
+
+/* ---- Dark "Can't find it? We'll source it" band ---- */
+.source-band { background: var(--charcoal-2); color: #fff; padding: 34px 0; border-top: 1px solid #34373B; border-bottom: 1px solid #34373B; }
+.source-band h2 { font-size: 1.4rem; margin: 0 0 4px; color: #fff; }
+.source-band p { color: var(--muted-on-dark); }
