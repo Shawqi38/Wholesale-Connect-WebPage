@@ -350,3 +350,11 @@ textarea { min-height: 140px; resize: vertical; }
 .source-band { background: var(--charcoal-2); color: #fff; padding: 34px 0; border-top: 1px solid #34373B; border-bottom: 1px solid #34373B; }
 .source-band h2 { font-size: 1.4rem; margin: 0 0 4px; color: #fff; }
 .source-band p { color: var(--muted-on-dark); }
+
+/* ---- Phones: the menu scrolls away instead of staying stuck to the top ----
+   On a computer the menu is one short row and stays in view. On a phone it wraps
+   into several rows and covers too much of the screen, so it scrolls out of the way. */
+@media (max-width: 820px) {
+  .site-header { position: static; }
+  .group { scroll-margin-top: 16px; }
+}
